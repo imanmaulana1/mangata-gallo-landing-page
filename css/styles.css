@@ -1,0 +1,217 @@
+:root {
+  --white-30: hsl(0, 0%, 94%);
+  --white-20: hsl(0, 0%, 96%);
+  --white-50: hsla(0, 0%, 100%, 0.902); /* button top scroll */
+  --white-100: hsl(0, 0%, 100%);
+  --black-80: hsl(0, 0%, 20%); /* title or secondary */
+  --black-100: hsl(0, 0%, 13%); /* button, header, */
+  --gray-100: #777777; /* text or lead, */
+  --gold: #c3935b;
+
+  --ff-lora: 'Lora', serif;
+  --ff-marcellus: 'Marcellus', serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-lora);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================================================ */
+
+.container {
+  max-width: 68.889rem;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.nav-links {
+  font-family: var(--ff-marcellus);
+  font-size: 14px;
+  color: var(--white-50);
+}
+
+/* Styling for Header */
+header {
+  position: relative;
+  height: 36.111rem;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../assets/images/hero.jpg) no-repeat center/cover;
+  filter: brightness(90%);
+  z-index: 1;
+}
+
+header .container,
+ul,
+.nav-cta {
+  display: flex;
+  align-items: center;
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+  padding-block: 24px;
+}
+
+header .logo {
+  width: 12.222rem;
+  height: 2rem;
+}
+
+ul,
+.nav-cta {
+  gap: 20px;
+}
+
+.nav-links:hover,
+.nav-cta button span:hover {
+  color: var(--white-100);
+}
+
+.nav-cta .nav-links {
+  text-transform: uppercase;
+}
+
+.nav-cta button {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-cta button span {
+  width: 100%;
+  height: 100%;
+  color: var(--white-50);
+}
+
+.btn-cart {
+  position: relative;
+}
+
+.nav-cta .count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  display: grid;
+  place-items: center;
+  font-size: 0.563rem;
+  font-family: var(--ff-lora);
+}
+
+header .container:last-child {
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+#hero {
+  width: 50%;
+}
+
+#hero p {
+  color: var(--white-50);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+#hero h1 {
+  color: var(--white-100);
+  font-family: var(--ff-marcellus);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 54px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#hero .hero-lead {
+  font-size: 1rem;
+  font-style: normal;
+  margin-bottom: 25px;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-hero {
+  padding: 5px 20px;
+  font-size: 0.813rem;
+  font-weight: 600;
+  line-height: 22.4px;
+  text-transform: uppercase;
+}
+
+.shop {
+  background-color: var(--white-100);
+  color: var(--black-80);
+}
+
+.view {
+  background-color: transparent;
+  color: var(--white-100);
+  border: 1px solid var(--white-50);
+}
+
+.shop:hover {
+  background-color: var(--white-50);
+}
+
+.view:hover {
+  border-color: var(--white-100);
+}
