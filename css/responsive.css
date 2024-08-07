@@ -55,11 +55,10 @@
   #special-offer .container .main-title {
     font-size: 2.813rem;
   }
-  
+
   #special-offer .container .lead {
     font-size: 1.75rem;
   }
-  
 }
 
 /* Small Devices, Tablets */
@@ -106,11 +105,10 @@
     grid-row: 1 / 2;
   }
 
-  
   #special-offer .container .main-title {
     font-size: 35px;
   }
-  
+
   #special-offer .container .lead {
     font-size: 22px;
   }
@@ -118,8 +116,21 @@
   #special-offer .btn-special-offer {
     margin-top: 0;
   }
-  
-  
+
+  #footer .container .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-links {
+    flex: 1;
+    gap: 2rem;
+  }
+
+  #footer .copyright .container {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 /* Extra Small Devices, Phones */
