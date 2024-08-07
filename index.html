@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
-  <body>
+  <body id="body">
     <div class="overlay" aria-hidden="true">
       <div class="cart-wrapper">
         <div class="cart-header">
@@ -54,10 +54,10 @@
         <div class="nav-mobile">
           <h3>Menu</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Custom Jewelry</a></li>
+            <li><a href="#body">Home</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#collection">Collections</a></li>
+            <li><a href="#custom">Custom Jewelry</a></li>
             <li>
               <a href="#">
                 <span class="material-symbols-outlined"> favorite </span>
@@ -74,41 +74,48 @@
         </div>
       </div>
     </div>
+    <div class="top-scroll">
+      <a href="#body"
+        ><span class="material-symbols-outlined"> keyboard_arrow_up </span></a
+      >
+    </div>
     <header>
       <div class="header-background"></div>
-      <div class="container">
-        <button class="hamburger">
-          <span class="material-symbols-outlined btn-hamburger"> menu </span>
-        </button>
-        <a href="#" aria-label="Home">
-          <img
-            src="./assets/images/logo.png"
-            class="logo"
-            alt="Mangata Gallo logo"
-            width="150"
-            height="50"
-          />
-        </a>
-        <nav aria-label="Main navigation" role="navigation">
-          <ul>
-            <li><a href="#" class="nav-links">Home</a></li>
-            <li><a href="#" class="nav-links">Shop</a></li>
-            <li><a href="#" class="nav-links">Collections</a></li>
-            <li><a href="#" class="nav-links">Custom Jewelry</a></li>
-          </ul>
-        </nav>
-        <div class="nav-cta">
-          <a href="#" class="nav-links">Login / Register</a>
-          <button class="btn-search" aria-label="Search">
-            <span class="material-symbols-outlined"> search </span>
+      <div id="navigation">
+        <div class="container">
+          <button class="hamburger">
+            <span class="material-symbols-outlined btn-hamburger"> menu </span>
           </button>
-          <button class="btn-wishlist" aria-label="Wishlist">
-            <span class="material-symbols-outlined"> favorite </span>
-          </button>
-          <button class="btn-cart" aria-label="Cart">
-            <span class="material-symbols-outlined"> shopping_cart </span>
-            <span class="count">0</span>
-          </button>
+          <a href="#" aria-label="Home">
+            <img
+              src="./assets/images/logo.png"
+              class="logo"
+              alt="Mangata Gallo logo"
+              width="150"
+              height="50"
+            />
+          </a>
+          <nav aria-label="Main navigation" role="navigation">
+            <ul>
+              <li><a href="./index.html" class="nav-links">Home</a></li>
+              <li><a href="#store" class="nav-links">Store</a></li>
+              <li><a href="#collection" class="nav-links">Collections</a></li>
+              <li><a href="#custom" class="nav-links">Custom Jewelry</a></li>
+            </ul>
+          </nav>
+          <div class="nav-cta">
+            <a href="#" class="nav-links">Login / Register</a>
+            <button class="btn-search" aria-label="Search">
+              <span class="material-symbols-outlined"> search </span>
+            </button>
+            <button class="btn-wishlist" aria-label="Wishlist">
+              <span class="material-symbols-outlined"> favorite </span>
+            </button>
+            <button class="btn-cart" aria-label="Cart">
+              <span class="material-symbols-outlined"> shopping_cart </span>
+              <span class="count">0</span>
+            </button>
+          </div>
         </div>
       </div>
       <div class="container">
@@ -127,6 +134,103 @@
         </section>
       </div>
     </header>
+    <main>
+      <section id="store">
+        <div class="container">
+          <div class="store-img">
+            <img src="./assets/images/girl.jpg" alt="" />
+          </div>
+          <div class="store-content">
+            <h3 class="subtitle">Timeless Elegance</h3>
+            <h2 class="main-title">Jewellery Store</h2>
+            <p class="lead">
+              Step into a realm where elegance meets antiquity. Our jewellery
+              store is a treasure trove of timeless pieces, each telling a story
+              of bygone eras. Immerse yourself in an atmosphere of refined
+              luxury, where vintage charm blends seamlessly with modern
+              sophistication. From delicate antique filigree to bold Art Deco
+              designs, our collection celebrates the enduring allure of classic
+              craftsmanship. Experience the magic of history adorning your
+              present, in a space that honors the artistry of the past.
+            </p>
+            <div class="hero-cta">
+              <a href="#shop" class="btn-hero shop">Shop Now</a>
+              <a href="#collections" class="btn-hero view">View More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="custom">
+        <div class="container">
+          <div class="custom-content">
+            <h2>Craft Your Dream: Bespoke Jewelry Creations</h2>
+            <p class="description">
+              At Mangata Gallo, we believe that every piece of jewelry should be
+              as unique as the person wearing it. Our custom jewelry service
+              allows you to bring your vision to life, creating one-of-a-kind
+              pieces that tell your personal story.
+            </p>
+            <blockquote class="founder-quote">
+              "Every custom piece we create is a journey of passion, creativity,
+              and unparalleled craftsmanship. It's not just about making
+              jewelry; it's about crafting dreams and memories that last a
+              lifetime."
+            </blockquote>
+            <cite>- <span>Elena Gallo</span>, Founder of Mangata Gallo</cite>
+          </div>
+          <div class="custom-img">
+            <img src="./assets/images/custom.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="collection">
+        <div class="container">
+          <div class="collection-content">
+            <h3 class="subtitle">Eternal Love Stories</h3>
+            <h2 class="title">Engagement & Wedding Collections</h2>
+            <p class="lead">
+              Celebrate your journey of love with our exquisite engagement and
+              wedding collections. Each piece is meticulously crafted to
+              symbolize your unique bond and the promise of forever. From
+              classic solitaires that sparkle with timeless elegance to
+              intricate wedding bands that tell your story, find the perfect
+              jewels to mark life's most precious moments. Let our collections
+              be the beginning of your happily ever after.
+            </p>
+          </div>
+          <div class="collection-img-wrapper">
+            <div class="collection-img">
+              <img src="./assets/images/collection1.jpg" alt="" />
+            </div>
+            <div class="collection-img">
+              <img src="./assets/images/collection2.jpg" alt="" />
+            </div>
+            <div class="collection-img">
+              <img src="./assets/images/collection3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="special-offer">
+        <div class="container">
+          <div class="video-wrapper">
+            <video controls poster="./assets/images/jewelry.jpg">
+              <source
+                src="./assets/videos/Tiffany & Co. — I Will.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="special-offer-content">
+            <h3 class="subtitle">Special Offer</h3>
+            <h2 class="main-title">Jewellery Box</h2>
+            <p class="lead">All in one box</p>
+            <a href="#" class="btn-special-offer">Check Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="./js/script.js"></script>
   </body>
 </html>
