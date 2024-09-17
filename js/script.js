@@ -1,28 +1,27 @@
-const btnCart = document.querySelector('.btn-cart');
-const btnCloseCart = document.querySelector('.btn-close-cart');
-const btnHamburger = document.querySelector('.btn-hamburger');
-const overlay = document.querySelector('.overlay');
-const cartWrapper = document.querySelector('.cart-wrapper');
-const navWrapper = document.querySelector('.nav-wrapper');
-const body = document.body;
-const navigation = document.getElementById('navigation');
 const scrollUp = document.querySelector('.top-scroll');
+const navigation = document.querySelector('.navigation-wrapper');
+const btnHamburger = document.querySelector('.btn-hamburger');
+const btnCloseCart = document.querySelector('.btn-close-cart');
+const navWrapper = document.querySelector('.nav-wrapper');
+const cartWrapper = document.querySelector('.cart-wrapper');
+const body = document.body;
+const overlay = document.querySelector('.overlay');
 let lastScrollPosition = 0;
 
-const hideOverlay = () => {
+function hideOverlay() {
   overlay.classList.remove('show');
   body.classList.remove('no-scroll');
   cartWrapper.removeEventListener('transitionend', hideOverlay);
   navWrapper.removeEventListener('transitionend', hideOverlay);
-};
+}
 
-btnCart.addEventListener('click', () => {
+function showCart() {
   overlay.classList.add('show');
   cartWrapper.classList.add('show');
   body.classList.add('no-scroll');
-});
+}
 
-btnCloseCart.addEventListener('click', () => {
+function closeCart() {
   cartWrapper.classList.remove('show');
   cartWrapper.addEventListener('transitionend', hideOverlay);
 
@@ -32,15 +31,15 @@ btnCloseCart.addEventListener('click', () => {
       body.classList.remove('no-scroll');
     }
   }, 350);
-});
+}
 
-btnHamburger.addEventListener('click', () => {
+function showMenuMobile() {
   overlay.classList.add('show');
   navWrapper.classList.add('show');
   body.classList.add('no-scroll');
-});
+}
 
-overlay.addEventListener('click', () => {
+function closeMenuMobile() {
   navWrapper.classList.remove('show');
   navWrapper.addEventListener('transitionend', hideOverlay);
 
@@ -50,6 +49,19 @@ overlay.addEventListener('click', () => {
       body.classList.remove('no-scroll');
     }
   }, 350);
+}
+
+btnHamburger.addEventListener('click', showMenuMobile);
+
+document.querySelectorAll('.btn-cart').forEach((btnCart) => {
+  btnCart.addEventListener('click', showCart);
+});
+
+btnCloseCart.addEventListener('click', closeCart);
+
+overlay.addEventListener('click', () => {
+  closeMenuMobile();
+  closeCart();
 });
 
 window.addEventListener('scroll', () => {
